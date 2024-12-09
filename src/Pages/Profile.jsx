@@ -21,6 +21,7 @@ const Profile = () => {
   // Function to handle account deletion
   const handleDeleteAccount = async () => {
     await delete_account();
+    localStorage.removeItem("userData")
    navigate("/login")
     setIsModalVisible(false); // Close the modal after deleting
   };
