@@ -50,7 +50,7 @@ export const useAuth = create((set) => ({
   log_out: async () => {
     try {
       set({isLoading:true , messagee:``});
-      await axiosInstance.post("/user/logout");
+       await axiosInstance.post("/user/logout");
       set({userData: null});
       localStorage.removeItem("userData");
     } catch (error) {
